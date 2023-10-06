@@ -4,7 +4,7 @@
 
 /* betty style doc for function main goes there */
 /**
- * main - Program to show output for different integers
+ * main - Program prints output for different integers
  * Return: 0 to indicate success of code
  */
 int main(void)
@@ -15,11 +15,11 @@ int main(void)
 	n = rand() - RAND_MAX / 2;
 	/* your code goes there */
 	if (n > 0)
-	printf("%d, is positive", n);
+		printf("%d, is positive", n);
 	else if (n == 0)
-	printf("%d is zero", n);
+		printf("%d is zero", n);
 	else
-	printf("%d is negative", n);
+		printf("%d is negative", n);
 	return (0);
 
 }
