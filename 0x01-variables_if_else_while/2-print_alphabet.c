@@ -3,15 +3,15 @@
 /**
  * main - Program to use putchar function
  *
- * Return: Always 0 to indicate code success
+ * Return: Always indicate 0 to show code success
  */
 
 int main(void)
 {
-	char a;
+	char i;
 
-	for (a = 'b' ; a <= 'z' ; a++)
-		putchar(a);
+	for (i = 'a' ; i <= 'z' ; i++)
+		putchar(i);
 		putchar('\n');
 	return (0);
 
