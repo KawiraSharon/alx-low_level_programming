@@ -6,10 +6,10 @@
  */
 int main(void)
 {
-char a;
-for (a = 'b' ; <= 'z' ; a++)
-	if (a != 'q' && a != 'e')
-		putchar(a);
+char i;
+for (i = 'a'; i <= 'z' ; i++)
+	if (i != 'q' && i != 'e')
+		putchar(i);
 putchar('\n');
 return (0);
 
