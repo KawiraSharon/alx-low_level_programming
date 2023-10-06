@@ -5,8 +5,8 @@
 
 /* betty style doc for function main goes there */
 /**
- * main - prints whole program
- * Return: Always 0 (Success)
+ * main - prints different values every time
+ * Return: Always indicate 0 to show code (Success)
  */
 int main(void)
 {
