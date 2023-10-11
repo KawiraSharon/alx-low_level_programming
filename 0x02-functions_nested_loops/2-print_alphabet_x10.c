@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * print_alphabet_x10
+ * print_alphabet_x10 - prints using for loop
  * Return: Always return (0)
  */
 
