@@ -1,15 +1,20 @@
 #include "main.h"
 
 /**
- * _puts - program to print string, new line
- * @str: parameter defined
+ * print_numbers - Integer printed between 0 to 9
+ * Return: Prameters defined for 0 to max 9
  */
-void _puts(char *str)
+
+void print_numbers(void)
+
 {
-while (*str != '\0')
-{
-_putchar(*str++);
-}
+
+int x;
+
+for (x = 0; x < 10; x++)
+
+_putchar(x + '0');
+
 _putchar('\n');
 
 }
