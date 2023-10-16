@@ -1,8 +1,8 @@
 #include "main.h"
 
 /**
- * _puts - program to output string then new line, to stdout
- * @str: as defined
+ * _puts - function to print string, new line, to stdout
+ * @str: string to be output
  */
 
 void _puts(char *str)
@@ -20,3 +20,4 @@ _putchar(*str++);
 _putchar('\n');
 
 }
+
