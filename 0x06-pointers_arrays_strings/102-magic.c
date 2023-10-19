@@ -1,13 +1,5 @@
 #include <stdio.h>
 
-/**
- * main - entry point of program
- *
- * the program sets array element that uses pointer to print result
- *
- * Return: 0 always for successful execution
- */
-
 int main(void)
 {
 int n;
