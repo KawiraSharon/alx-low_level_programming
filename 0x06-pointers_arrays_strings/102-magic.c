@@ -1,9 +1,4 @@
-#include <stdio.h>
-
-/*
- * main - add line to code
- * return: 0
- */
+#include <stdio.h
 
 int main(void)
 {
@@ -13,22 +8,16 @@ int *p;
 
 a[2] = 1024;
 p = &n;
-
   /*
-   * code line written here...
+   * write your line of code here...
    * Remember:
-   * - use of not allowed
-   * - modofication of p not allowed
-   * - statement must only be one
-   * - coding anything other than this line of code not allowed
+   * - you are not allowed to use a
+   * - you are not allowed to modify p
+   * - only one statement
+   * - you are not allowed to code anything else than this line of code
    */
-
 *(p + 5) = 98;
-
-/* prints 98 (followed by new line) \n */
-
+  /* ...so that this prints 98\n */
 printf("a[2] = %d\n", a[2]);
 return (0);
-
 }
-
