@@ -1,6 +1,7 @@
 #include <stdio.h>
 
-/** main - entry poit of program
+/**
+ * main - entry point of program
  *
  * the program sets array element that uses pointer to print result
  *
