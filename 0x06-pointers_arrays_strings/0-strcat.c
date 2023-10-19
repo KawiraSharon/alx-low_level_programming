@@ -3,7 +3,7 @@
  * _strcat -code generates function to concatenate two strings
  * @dest: value 1 of input
  * @src: value 2 of input
- * Return: code returns void
+ * Return: string of pointer destination
  */
 
 char *_strcat(char *dest, char *src)
@@ -26,6 +26,5 @@ char *_strcat(char *dest, char *src)
 
 	dest[i] = '\0';
 	return (dest);
-
 }
 
