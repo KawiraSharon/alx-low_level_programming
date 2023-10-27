@@ -28,7 +28,7 @@ int main(int argc, char *argv[])
 		pointer = argv[i];
 		j = atoi(pointer);
 
-		if (!isdigit((unsigned char)pointer[0]))
+		if (!isdigit(pointer[0]))
 		{
 			printf("Error\n");
 			return (1);
