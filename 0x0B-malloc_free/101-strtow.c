@@ -1,79 +1,78 @@
-#include "main.h"
 #include <stdlib.h>
+#include "main.h"
 
 /**
- * count_word - auxiliary function to determine the count of words in a string
- * @s: string to assess
+ * count_word - function counts number of words in string
+ * @s: string for evaluate
  *
- * Return: count of words
+ * Return: int representing number of words
  */
 int count_word(char *s)
 {
-	int alpha, beta, gamma;
+	int flag, c, w;
 
-	alpha = 0;
-	beta = 0;
+	flag = 0;
+	w = 0;
 
-	for (gamma = 0; s[gamma] != '\0'; gamma++)
+	for (c = 0; s[c] != '\0'; c++)
 	{
-		if (s[gamma] == ' ')
-			alpha = 0;
-		else if (alpha == 0)
+		if (s[c] == ' ')
+			flag = 0;
+		else if (flag == 0)
 		{
-			alpha = 1;
-			beta++;
+			flag = 1;
+			w++;
 		}
 	}
 
-	return (beta);
+	return (w);
 }
 
 /**
- * **strtow - divides a string into separate words
- * @str: string to divide
+ * **strtow - splits string into words
+ * @str: string meant to be split
  *
- * Return: pointer to an array of strings (Success)
+ * Return: pointer returned on (Success)
  * or NULL (Error)
  */
 char **strtow(char *str)
 {
-	char **matrix, *delta;
-	int epsilon, zeta = 0, eta = 0, theta, iota, kappa;
+	char **matrix, *tmp;
+	int i, k = 0, len = 0, words, c = 0, start, end;
 
-	while (*(str + eta))
-		eta++;
-	theta = count_word(str);
-	if (theta == 0)
+	while (*(str + len))
+		len++;
+	words = count_word(str);
+	if (words == 0)
 		return (NULL);
 
-	matrix = (char **) malloc(sizeof(char *) * (theta + 1));
+	matrix = (char **) malloc(sizeof(char *) * (words + 1));
 	if (matrix == NULL)
 		return (NULL);
 
-	for (epsilon = 0; epsilon <= eta; epsilon++)
+	for (i = 0; i <= len; i++)
 	{
-		if (str[epsilon] == ' ' || str[epsilon] == '\0')
+		if (str[i] == ' ' || str[i] == '\0')
 		{
-			if (kappa)
+			if (c)
 			{
-				iota = epsilon;
-				delta = (char *) malloc(sizeof(char) * (kappa + 1));
-				if (delta == NULL)
+				end = i;
+				tmp = (char *) malloc(sizeof(char) * (c + 1));
+				if (tmp == NULL)
 					return (NULL);
-				while (zeta < iota)
-					*delta++ = str[zeta++];
-				*delta = '\0';
-				matrix[zeta] = delta - kappa;
-				zeta++;
-				kappa = 0;
+				while (start < end)
+					*tmp++ = str[start++];
+				*tmp = '\0';
+				matrix[k] = tmp - c;
+				k++;
+				c = 0;
 			}
 		}
-		else if (kappa++ == 0)
-			zeta = epsilon;
+		else if (c++ == 0)
+			start = i;
 	}
 
-	matrix[zeta] = NULL;
+	matrix[k] = NULL;
 
 	return (matrix);
 }
-
