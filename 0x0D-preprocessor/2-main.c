@@ -6,7 +6,7 @@
  * Author - KawiraSharon
  * Return: 0 on compilation success
  */
-int main (void)
+int main(void)
 {
 	printf("%s\n", __FILE__);
 	return (0);
