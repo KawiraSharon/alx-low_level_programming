@@ -5,6 +5,7 @@
 /**
  * print_all - print everything entered by user
  * @format: list char, float, int, string as specified for user to enter
+ * Return: void return data type so nothing is returned
  */
 void print_all(const char * const format, ...)
 {
