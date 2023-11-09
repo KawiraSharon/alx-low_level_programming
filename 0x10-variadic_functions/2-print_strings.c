@@ -6,7 +6,6 @@
  * print_strings - function to print string followed by \n.
  * @separator: string to print btwn strngs
  * @n: no of arguments in strings user enters
- * @... user elements user enters
  * Author: KawiraSharon
  * Return: nth as return data type of func is void
  */
