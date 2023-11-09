@@ -22,7 +22,7 @@ void print_strings(const char *separator, const unsigned int n, ...)
 	{
 		strng = va_arg(stringNew, char *);
 
-		if (strng)
+		if (strng != NULL)
 			printf("%s", strng);
 
 		else
@@ -33,6 +33,5 @@ void print_strings(const char *separator, const unsigned int n, ...)
 	}
 
 	printf("\n");
-
 	va_end(stringNew);
 }
