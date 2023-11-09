@@ -4,7 +4,7 @@
 
 /**
  * print_numbers - function to print numbers then \n
- * @separator: mandatory argument; pointer separates string between numbers
+ * @separator: mandatory argument; string being printed btwn no.s
  * @n: mandatory argument; total count of int passed to func
  * @... optional arguments user enters
  * Author: KawiraSharon
@@ -12,8 +12,8 @@
  */
 void print_numbers(const char *separator, const unsigned int n, ...)
 {
-	unsigned int i;
 	va_list printer;
+	unsigned int i;
 
 	va_start(printer, n);
 
