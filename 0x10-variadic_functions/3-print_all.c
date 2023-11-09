@@ -3,10 +3,10 @@
 #include <stdio.h>
 
 /**
- * print_all - prints anything with respect to specified format
- * @format: list type of arg function accepts.
+ * print_all - prints anything based on format specified
+ * @format: list of types of arguments passed to function
  *
- * Return: Nothing because of void data type
+ * Return: void data type so nothing is returned
  */
 void print_all(const char * const format, ...)
 {
@@ -26,29 +26,19 @@ void print_all(const char * const format, ...)
 			if (format[x] == t_arg[y])
 			{
 				printf("%s", separator);
-				switch (format[x])
+				if (format[x] == 'c')
+					printf("%c", va_arg(outputAll, int));
+				else if (format[x] == 'i')
+					printf("%d", va_arg(outputAll, int));
+				else if (format[x] == 'f')
+					printf("%f", va_arg(outputAll, double));
+				else if (format[x] == 's')
 				{
-					case 'c':
-						printf("%c", va_arg(outputAll, int));
-						break;
-					case 'i':
-						printf("%d", va_arg(outputAll, int));
-						break;
-					case 'f':
-						printf("%f", va_arg(outputAll, double));
-						break;
-					case 's':
-						str = va_arg(outputAll, char *);
-						if (!str)
-						{
-							printf("(nil)");
-							break;
-						}
+					str = va_arg(outputAll, char *);
+					if (!str)
+						printf("(nil)");
+					else
 						printf("%s", str);
-						break;
-					default:
-						y++;
-						continue;
 				}
 				separator = ", ";
 				break;
