@@ -4,7 +4,8 @@
  * add_node_end - function that adds new node to end of this list
  * @head: pointer to pointer for new last node
  * @str: the string we shall duplicate
- * @Return: address of last new element
+ *
+ * Return: address of last new element
  */
 list_t *add_node_end(list_t **head, const char *str)
 {
@@ -30,7 +31,7 @@ list_t *add_node_end(list_t **head, const char *str)
 
 	else
 	{
-		while(ptrTemp->next != NULL)
+		while (ptrTemp->next != NULL)
 		ptrTemp = ptrTemp->next;
 		ptrTemp->next = ptrNew;
 	}
