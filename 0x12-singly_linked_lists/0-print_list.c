@@ -15,12 +15,12 @@ size_t print_list(const list_t *h)
 	while (h != NULL)
 	{
 		if (h->str == NULL)
-			printf("[%d] %s", 0, "(nil)");
+			printf("[%d] %s\n", 0, "(nil)");
 		/*no node to return because the current node was calculated prev.*/
 
 		else
 		{
-			printf("[%d] %s", h->len, h->str);
+			printf("[%d] %s\n", h->len, h->str);
 		}
 			/*use h->next as the newly incremented value of h, not h++*/
 		h = h->next;
