@@ -8,8 +8,9 @@
 size_t print_list(const list_t *h)
 {
 	/* initialize return data type, size_t*/
-	size_t node_no = 0;
-
+	size_t node_no;
+	
+	node_no = 0;
 	if (h->str == NULL)
 		printf("[%d] %s", 0, "(nil)");
 	/*no node to return because the current node was calculated prev.*/
