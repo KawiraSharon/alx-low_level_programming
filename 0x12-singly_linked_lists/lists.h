@@ -4,6 +4,8 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <stddef.h>
+#include <string.h>
+
 /**
  * struct list_t - singly linked list of elements being printed
  * @str: string dynamically allocated to first segment of node
