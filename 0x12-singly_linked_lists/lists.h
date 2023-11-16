@@ -10,13 +10,12 @@
  * @list_len: length of string, always positive value
  * @next: address pointer of next node
  */
-struct list_t
+typedef struct list_t
 {
 	char *str;
 	unsigned int len;
 	struct list_t *next;
-};
-typedef struct list_t list_t;
+} list_t;
 
 int _putchar(char c);
 size_t print_list(const list_t *h);
