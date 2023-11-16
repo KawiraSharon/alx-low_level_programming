@@ -19,7 +19,9 @@ size_t print_list(const list_t *h)
 		/*no node to return because the current node was calculated prev.*/
 		
 		else
+		{
 			printf("[%d] %s", h->len, h->str);
+		}
 			/*use h->next as the newly incremented value of h, not h++*/
 		h = h->next;
 		node_no++;
