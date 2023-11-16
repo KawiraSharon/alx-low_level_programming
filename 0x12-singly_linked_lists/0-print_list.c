@@ -11,18 +11,18 @@ size_t print_list(const list_t *h)
 	size_t node_no;
 	
 	node_no = 0;
-	if (h->str == NULL)
-		printf("[%d] %s", 0, "(nil)");
-	/*no node to return because the current node was calculated prev.*/
-	else
+	while (h != NULL)
 	{
-		while (h != NULL)
-		{
+		if (h->str == NULL)
+			printf("[%d] %s", 0, "(nil)");
+		/*no node to return because the current node was calculated prev.*/
+		
+		else
 			printf("[%d] %s", h->len, h->str);
 			/*use h->next as the newly incremented value of h, not h++*/
-			h = h->next;
-			node_no++;
-		}
+		h = h->next;
+		node_no++;
 	}
+
 	return(node_no);
 }
