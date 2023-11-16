@@ -7,9 +7,9 @@
 #include <string.h>
 
 /**
- * struct list_t - singly linked list of elements being printed
+ * struct list_k - singly linked list of elements being printed
  * @str: string dynamically allocated to first segment of node
- * @list_len: length of string, always positive value
+ * @len: length of string, always positive value
  * @next: address pointer of next node
  */
 typedef struct list_k
