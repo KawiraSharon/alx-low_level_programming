@@ -7,7 +7,7 @@
  */
 size_t print_listint(const listint_t *h)
 {
-	/* declare and initialize node of d_type size_t*/
+	/* declare and initialize vrbl count_node of d_type size_t*/
 	size_t count_node = 0;
 
 	while (h)
