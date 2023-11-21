@@ -12,6 +12,11 @@ size_t print_listint_safe(const listint_t *head)
 	size_t count = 0;
 	size_t ptrNew;
 
+	if (!head)
+	{
+		exit(98);
+	}
+
 	ptrTemp = head;
 	while (ptrTemp)
 	{
@@ -30,8 +35,6 @@ size_t print_listint_safe(const listint_t *head)
 			listno = listno->next;
 			ptrNew++;
 		}
-		if (!head)
-			exit(98);
 	}
 	return (count);
 }
