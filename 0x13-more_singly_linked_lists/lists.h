@@ -3,6 +3,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <stdint.h>
 
 /**
  * struct listint_ksm - struct d_type, list.., name given
