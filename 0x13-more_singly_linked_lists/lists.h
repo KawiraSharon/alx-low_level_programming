@@ -5,17 +5,16 @@
 #include <stdlib.h>
 
 /**
- * struct listint_s - singly linked list
- * @n: integer
- * @next: points to the next node
+ * struct listint_ksm - struct is the d_type, list int.., name of list
+ * @n: represents in value for total nodes in linked list
+ * @next: pointer to next node
  *
- * Description: singly linked list node structure
- * for Holberton project
+ * Description: singly linked list
  */
-typedef struct listint_s
+typedef struct listint_ksm
 {
 	int n;
-	struct listint_s *next;
+	struct listint_ksm *next;
 } listint_t;
 
 size_t print_listint(const listint_t *h);
