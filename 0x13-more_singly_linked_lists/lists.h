@@ -6,7 +6,7 @@
 
 /**
  * struct listint_ksm - struct d_type, list.., name given
- * @i: count int
+ * @n: count int
  * @next: pointer to node next
  *
  * Description: template and betty doc for each present element
