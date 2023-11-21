@@ -24,7 +24,7 @@ size_t print_listint_safe(const listint_t *head)
 		{
 			if (ptrTemp == ptrN)
 			{
-				printf("[%p] %d\n", (void *)ptrTemp, ptrTemp->n);
+				printf("->[%p] %d\n", (void *)ptrTemp, ptrTemp->n);
 				return (count_int);
 			}
 			ptrN = ptrN->next;
