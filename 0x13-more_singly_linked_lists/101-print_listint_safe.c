@@ -30,8 +30,9 @@ size_t print_listint_safe(const listint_t *head)
 			ptrN = ptrN->next;
 			node_new++;
 		}
-		if (!head)
-			exit(98);
 	}
+	if (head == NULL)
+		exit(98);
+
 	return (count_int);
 }
