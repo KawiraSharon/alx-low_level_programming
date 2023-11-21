@@ -1,4 +1,5 @@
 #include "lists.h"
+#include <stdio.h>
 
 /**
  * print_listint - function to execute task of printing all elements in list
@@ -12,7 +13,7 @@ size_t print_listint(const listint_t *h)
 
 	while (h)
 	{
-		printf("%d \n", h->n);
+		printf("%d\n", h->n);
 		count_node++;
 		h = h->next;
 	}
