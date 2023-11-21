@@ -32,5 +32,6 @@ void free_listint2(listint_t **head);
 int pop_listint(listint_t **head);
 int sum_listint(listint_t *head);
 int delete_nodeint_at_index(listint_t **head, unsigned int index);
+size_t print_listint_safe(const listint_t *head);
 
 #endif
