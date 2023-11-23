@@ -9,12 +9,12 @@
  */
 unsigned int flip_bits(unsigned long int n, unsigned long int m)
 {
-	unsigned long int x_or = n ^ m, total_bits = 0;
+	unsigned long int exclusive_or = n ^ m, total_bits = 0;
 
-	while (x_or > 0)
+	while (exclusive_or > 0)
 	{
-		total_bits += (x_or & 1);
-		x_or >>= 1;
+		total_bits += (exclusive_or & 1);
+		exclusive_or >>= 1;
 	}
 
 	return (total_bits);
