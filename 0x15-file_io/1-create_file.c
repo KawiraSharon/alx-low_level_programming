@@ -19,7 +19,7 @@ int create_file(const char *filename, char *text_content)
 	if (text_content)
 	{
 		counter = 0;
-		while (text_content[i])
+		while (text_content[counter])
 			counter++;
 		wr_letters = write(f_desc, text_content, counter);
 		if (wr_letters != counter)
