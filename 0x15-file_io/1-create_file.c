@@ -1,7 +1,7 @@
 #include "main.h"
 /**
   * create_file - function to create a file
-  * @filename: pointer to char string of filename to be created 
+  * @filename: pointer to char string of filename to be created
   * @text_content: pointer to a char string for content to write
   * Author: KawiraSharon
   * Return:  1 on exection success -1 for failure
