@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
-  * main - function that copies content of a file to another file 
+  * main - function that copies content of a file to another file
   * @argc: arg count
   * @argv: arg vector
   * Return: 0 on code execution success
