@@ -28,7 +28,7 @@ int main(int argc, char *argv[])
 	}
 	while ((rddata_size = read(f_desc1, arr_buf, 1024)) > 0)
 	{
-		if (write(f_desc2, buf, rddata_size) != rddata_size)
+		if (write(f_desc2, arr_buf, rddata_size) != rddata_size)
 		{
 			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]), exit(99);
 		}
