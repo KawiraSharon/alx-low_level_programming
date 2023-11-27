@@ -180,12 +180,12 @@ void entry_pt(unsigned int elf_entry, unsigned char *elf_bytes)
 int main(int argc, char *argv[])
 {
 	int f_desc, read_file, close_file;
-	Elf64_Ehdr *ptrFile;
+	Elf64_Ehdr *file;
 
 	if (argc > 2 || argc < 2)
 		dprintf(STDERR_FILENO, "Usage: error in # of args\n"), exit(98);
-	ptrFile = malloc(sizeof(Elf64_Ehdr));
-	if (ptrFile == NULL)
+	file = malloc(sizeof(Elf64_Ehdr));
+	if (file == NULL)
 		dprintf(STDERR_FILENO, "error in allocate memory\n"), exit(98);
 	f_desc = open(*(argv + 1), O_RDONLY);
 	if (f_desc == -1)
@@ -193,25 +193,25 @@ int main(int argc, char *argv[])
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", *(argv + 1));
 		exit(98);
 	}
-	read_file = read(f_desc, ptrFile, sizeof(Elf64_Ehdr));
+	read_file = read(f_desc, file, sizeof(Elf64_Ehdr));
 	if (read_file == -1)
 	{
-		free(ptrFile);
+		free(file);
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", *(argv + 1));
 		exit(98);
 	}
-	valid_file(ptrFile->elf_bytes);
-	hex_magic(ptrFile->elf_bytes);
-	elf_ofclass(ptrFile->elf_bytes);
-	rep_data(ptrFile->elf_bytes);
-	file_version(ptrFile->elf_bytes);
-	oS_ABI(ptrFile->elf_bytes);
+	valid_file(file->e_ident);
+	hex_magic(file->e_ident);
+	elf_ofclass(file->e_ident);
+	rep_data(file->e_ident);
+	file_version(file->e_ident);
+	oS_ABI(file->e_ident);
 	printf("  ABI Version:                       ");
-	printf("%i\n", ptrFile->elf_bytes[EI_ABIVERSION]);
-	file_type(ptrFile->elf_typ, ptrFile->elf_bytes);
-	elf_entry(ptrFile->e_entry, ptrFile->elf_bytes);
-	free(ptrFile);
-	close_file = close(fd);
+	printf("%i\n", file->e_ident[EI_ABIVERSION]);
+	file_type(file->e_type, file->e_ident);
+	entry_pt(file->e_entry, file->e_ident);
+	free(file);
+	close_file = close(f_desc);
 	if (close_file)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd\n");
