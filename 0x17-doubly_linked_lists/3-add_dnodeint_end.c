@@ -5,19 +5,19 @@
  *
  * @head: list head
  * @n: element value
- * Return: new element address
+ * Return: nodeptr element address
  */
 dlistint_t *add_dnodeint_end(dlistint_t **head, const int n)
 {
 	dlistint_t *h;
-	dlistint_t *new;
+	dlistint_t *nodeptr;
 
-	new = malloc(sizeof(dlistint_t));
-	if (new == NULL)
+	nodeptr = malloc(sizeof(dlistint_t));
+	if (nodeptr == NULL)
 		return (NULL);
 
-	new->n = n;
-	new->next = NULL;
+	nodeptr->n = n;
+	nodeptr->next = NULL;
 
 	h = *head;
 
@@ -25,14 +25,14 @@ dlistint_t *add_dnodeint_end(dlistint_t **head, const int n)
 	{
 		while (h->next != NULL)
 			h = h->next;
-		h->next = new;
+		h->next = nodeptr;
 	}
 	else
 	{
-		*head = new;
+		*head = nodeptr;
 	}
 
-	new->prev = h;
+	nodeptr->prev = h;
 
-	return (new);
+	return (nodeptr);
 }

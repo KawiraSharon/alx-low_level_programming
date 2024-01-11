@@ -1,7 +1,7 @@
 #include "lists.h"
 
 /**
- * insert_dnodeint_at_index - inserts new node at given position
+ * insert_dnodeint_at_index - inserts newptr node at given position
  *
  * @h: list head
  * @idx: new node index
@@ -10,44 +10,44 @@
  */
 dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 {
-	dlistint_t *new;
-	dlistint_t *head;
+	dlistint_t *newptr;
+	dlistint_t *headPtr;
 	unsigned int i;
 
-	new = NULL;
+	newptr = NULL;
 	if (idx == 0)
-		new = add_dnodeint(h, n);
+		newptr = add_dnodeint(h, n);
 	else
 	{
-		head = *h;
+		headPtr = *h;
 		i = 1;
-		if (head != NULL)
-			while (head->prev != NULL)
-				head = head->prev;
-		while (head != NULL)
+		if (headPtr != NULL)
+			while (headPtr->prev != NULL)
+				headPtr = headPtr->prev;
+		while (headPtr != NULL)
 		{
 			if (i == idx)
 			{
-				if (head->next == NULL)
-					new = add_dnodeint_end(h, n);
+				if (headPtr->next == NULL)
+					newptr = add_dnodeint_end(h, n);
 				else
 				{
-					new = malloc(sizeof(dlistint_t));
-					if (new != NULL)
+					newptr = malloc(sizeof(dlistint_t));
+					if (newptr != NULL)
 					{
-						new->n = n;
-						new->next = head->next;
-						new->prev = head;
-						head->next->prev = new;
-						head->next = new;
+						newptr->n = n;
+						newptr->next = headPtr->next;
+						newptr->prev = headPtr;
+						headPtr->next->prev = newptr;
+						headPtr->next = newptr;
 					}
 				}
 				break;
 			}
-			head = head->next;
+			headPtr = headPtr->next;
 			i++;
 		}
 	}
 
-	return (new);
+	return (newptr);
 }

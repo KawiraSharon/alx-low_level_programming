@@ -1,16 +1,16 @@
 #include "lists.h"
 
 /**
- * sum_dlistint - returns the sum; all data (n) in double list
+ * sum_dlistint - returns the summation; all data (n) in double list
  *
  * @head: list head
- * Return: data sum
+ * Return: data summation
  */
 int sum_dlistint(dlistint_t *head)
 {
-	int sum;
+	int summation;
 
-	sum = 0;
+	summation = 0;
 
 	if (head != NULL)
 	{
@@ -19,10 +19,10 @@ int sum_dlistint(dlistint_t *head)
 
 		while (head != NULL)
 		{
-			sum += head->n;
+			summation += head->n;
 			head = head->next;
 		}
 	}
 
-	return (sum);
+	return (summation);
 }
