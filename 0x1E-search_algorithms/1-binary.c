@@ -2,7 +2,7 @@
 
 /**
  * recursive_search - searches for value in sorted array of integers
- * @array: array input 
+ * @array: array input
  * @size: array size
  * @value: value being searched for
  * Return: idx of number
